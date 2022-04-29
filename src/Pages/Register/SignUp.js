@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
+import SocialLogin from './SocialLogin';
 
 const SignUp = () => {
     const [agrre, setAgree] = useState(false)
@@ -15,11 +16,11 @@ const SignUp = () => {
             <Form className="container w-75">
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Email address</Form.Label>
-                    <Form.Control type="email" placeholder="Enter email" required/>
+                    <Form.Control type="email" name="email" placeholder="Enter email" required/>
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formBasicPassword">
                     <Form.Label>Password</Form.Label>
-                    <Form.Control type="password" placeholder="Password" required/>
+                    <Form.Control type="password" name="password" placeholder="Password" required/>
                 </Form.Group>
                 <input onClick={() => setAgree(!agrre)} type="checkbox" name="terms" id="terms" />
                 <level htmlFlor='terms' style={{color: '#6C757D'}}> Accept our terms and conditions </level> <br /> <br />
@@ -27,6 +28,7 @@ const SignUp = () => {
                 <Button disabled={!agrre} variant="light" type="submit">
                     SignUp
                 </Button>
+                <SocialLogin/>
             </Form>
         </div>
     );
