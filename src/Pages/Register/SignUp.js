@@ -21,6 +21,10 @@ const SignUp = () => {
         error,
       ] = useCreateUserWithEmailAndPassword(auth);
 
+      if(user){
+          navigate('/')
+      }
+
     const handleSignUp = event => {
         event.preventDefault()
         const email = event.target.email.value
