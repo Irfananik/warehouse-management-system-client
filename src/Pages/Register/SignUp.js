@@ -11,9 +11,14 @@ const SignUp = () => {
     const navigateToLogin = () => {
         navigate('/login')
     }
+
+    const handleSignUp = event => {
+        event.preventDefault()
+    }
     return (
         <div className="container my-4">
-            <Form className="container w-75">
+             <h3 style={{ color: 'white', fontWeight: 'bold' }}>SignUp Here</h3>
+            <Form onSubmit={handleSignUp} className="container w-75">
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Email address</Form.Label>
                     <Form.Control type="email" name="email" placeholder="Enter email" required/>
