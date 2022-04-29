@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
+import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import SocialLogin from './SocialLogin';
+import auth from '../../firebase.init';
 
 const SignUp = () => {
     const [agrre, setAgree] = useState(false)
@@ -12,8 +14,19 @@ const SignUp = () => {
         navigate('/login')
     }
 
+    const [
+        createUserWithEmailAndPassword,
+        user,
+        loading,
+        error,
+      ] = useCreateUserWithEmailAndPassword(auth);
+
     const handleSignUp = event => {
         event.preventDefault()
+        const email = event.target.email.value
+        const password = event.target.password.value
+        
+        createUserWithEmailAndPassword(email, password)
     }
     return (
         <div className="container my-4">
