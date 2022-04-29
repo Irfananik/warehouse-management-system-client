@@ -1,0 +1,56 @@
+[
+    {
+        "id": "1",
+        "img":"https://i.ibb.co/L8fTZrY/samsung-stand-logo-1.jpg",
+        "name": "Samsung",
+        "description": "World lergest smartphone company",
+        "price": "1500",
+        "quantity": "11",
+        "supplier": "Mr Gugtuk"
+    },
+    {
+        "id": "2",
+        "img":"https://i.ibb.co/sWS9QTb/apple-1.jpg",
+        "name": "Apple",
+        "description": "World lergest tech company",
+        "price": "1900",
+        "quantity": "9",
+        "supplier": "Mr Saltuk"
+    },
+    {
+        "id": "3",
+        "img":"https://i.ibb.co/cNG2rZh/oneplus-1.jpg",
+        "name": "OnePluse",
+        "description": "Upcomming lergest smartphone company",
+        "price": "1400",
+        "quantity": "8",
+        "supplier": "Mr Jarkutay"
+    },
+    {
+        "id": "4",
+        "img":"https://i.ibb.co/jz8DWCS/nokia-logo-mwc-1.jpg",
+        "name": "Nokia",
+        "description": "Right now litle smartphone company",
+        "price": "1100",
+        "quantity": "7",
+        "supplier": "Mr Bamchi be"
+    },
+    {
+        "id": "5",
+        "img":"https://i.ibb.co/2cfb4S1/mi-1.jpg",
+        "name": "Mi",
+        "description": "Growing lergest smartphone company",
+        "price": "1300",
+        "quantity": "21",
+        "supplier": "Mr Artugul"
+    },
+    {
+        "id": "6",
+        "img":"https://i.ibb.co/Svfq1Mq/oppo-1.jpg",
+        "name": "Oppo",
+        "description": "lergest smartphone company",
+        "price": "1200",
+        "quantity": "18",
+        "supplier": "Mr Osman"
+    }
+]
