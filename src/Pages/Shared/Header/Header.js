@@ -19,6 +19,7 @@ const Header = () => {
                     <Nav className="me-auto">
                         <Nav.Link as={Link} to='/'>Home</Nav.Link>
                         <Nav.Link as={Link} to='/blog'>Blog</Nav.Link>
+                        <Nav.Link as={Link} to='/about'>About</Nav.Link>
                         {
                             user ? <button className="btn btn-link text-decoration-none text-primary" onClick={handleLogOut}>LogOut</button>
                                 :

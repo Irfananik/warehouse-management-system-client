@@ -15,7 +15,7 @@ const Item = ({ item }) => {
             <Card style={{ width: '18rem', padding: '16px' }}>
                 <Card.Img variant="top" src={img} />
                 <Card.Body>
-                    <Card.Title style={{ color: '#6C757D', fontWeight: 'bold' }}>Brand: {name}</Card.Title>
+                    <Card.Title style={{ color: '#6C757D', fontWeight: 'bold' }}>Title: {name}</Card.Title>
                     <Card.Text>
                         <h5 style={{ color: '#6C757D' }}>Quantity: {quantity}</h5>
                         <h5 style={{ color: '#6C757D' }}>supplier: {supplier}</h5>
