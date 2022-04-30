@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import SocialLogin from './SocialLogin';
 import auth from '../../firebase.init';
+import Loading from '../Shared/Loading/Loading';
 
 const SignUp = () => {
     const [agrre, setAgree] = useState(false)
@@ -19,7 +20,7 @@ const SignUp = () => {
         user,
         loading,
         error,
-      ] = useCreateUserWithEmailAndPassword(auth);
+      ] = useCreateUserWithEmailAndPassword(auth, {sendEmailVerification:true})
 
       if(user){
           navigate('/')
@@ -32,6 +33,11 @@ const SignUp = () => {
         
         createUserWithEmailAndPassword(email, password)
     }
+
+    if(loading){
+        return <Loading/>
+    }
+    
     return (
         <div className="container my-4">
              <h3 style={{ color: 'white', fontWeight: 'bold' }}>SignUp Here</h3>
