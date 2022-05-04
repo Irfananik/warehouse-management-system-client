@@ -3,7 +3,7 @@ import { Button, Card } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 
 const Item = ({ item }) => {
-    const { id,img, name, description, price, quantity, supplier } = item
+    const { _id,img, name, description, price, quantity, supplier } = item
 
     const navigate = useNavigate()
 
@@ -22,7 +22,7 @@ const Item = ({ item }) => {
                         <p style={{ color: '#6C757D' }}>{description}</p>
                         <h5 style={{ color: 'gold', fontWeight: 'bold' }}>Price: ${price}</h5>
                     </Card.Text>
-                    <Button onClick={() => handleItemDetail(id)} variant="light">Update</Button>
+                    <Button onClick={() => handleItemDetail(_id)} variant="light">Update</Button>
                 </Card.Body>
             </Card>
         </div>

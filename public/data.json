@@ -1,56 +1,83 @@
 [
     {
         "id": "1",
-        "img":"https://i.ibb.co/yfJGf8t/tv-1.jpg",
+        "img": "https://i.ibb.co/yfJGf8t/tv-1.jpg",
         "name": "Tv",
         "description": "Bangladesh lergest Tv supplier company",
         "price": "1500",
         "quantity": "11",
-        "supplier": "Mr Gugtuk"
+        "supplier": "Gugtuk Enterprise"
     },
     {
         "id": "2",
-        "img":"https://i.ibb.co/M2qFqZt/sphone.jpg",
+        "img": "https://i.ibb.co/M2qFqZt/sphone.jpg",
         "name": "Smartphone",
         "description": "Bangladesh lergest smartphone supplier company",
         "price": "1900",
         "quantity": "9",
-        "supplier": "Mr Saltuk"
+        "supplier": "Saltuk Enterprise"
     },
     {
         "id": "3",
-        "img":"https://i.ibb.co/xgYD5pw/air-cooler.jpg",
+        "img": "https://i.ibb.co/xgYD5pw/air-cooler.jpg",
         "name": "Air Cooler",
         "description": "Bangladesh lergest air cooler supplier company",
         "price": "1400",
         "quantity": "8",
-        "supplier": "Mr Jarkutay"
+        "supplier": "Jarkutay Enterprise"
     },
     {
         "id": "4",
-        "img":"https://i.ibb.co/qd6sYnt/frez-1.jpg",
+        "img": "https://i.ibb.co/qd6sYnt/frez-1.jpg",
         "name": "Refrigerator",
         "description": "Bangladesh lergest refrigerator supplier company",
         "price": "1100",
         "quantity": "7",
-        "supplier": "Mr Bamchi be"
+        "supplier": "Bamchi Enterprise"
     },
     {
         "id": "5",
-        "img":"https://i.ibb.co/M6jcGth/ricecoocker-1.jpg",
+        "img": "https://i.ibb.co/M6jcGth/ricecoocker-1.jpg",
         "name": "Rice Coocker",
         "description": "Bangladesh lergest rice coocker supplier company",
         "price": "1300",
         "quantity": "21",
-        "supplier": "Mr Artugul"
+        "supplier": "Artugul Enterprise"
     },
     {
         "id": "6",
-        "img":"https://i.ibb.co/sKg0Tny/washing-1.jpg",
+        "img": "https://i.ibb.co/sKg0Tny/washing-1.jpg",
         "name": "Washing Machines",
         "description": "Bangladesh lergest WashingM supplier company",
         "price": "1200",
         "quantity": "18",
-        "supplier": "Mr Osman"
+        "supplier": "Osman Enterprise"
+    },
+    {
+        "id": "7",
+        "img": "https://i.ibb.co/sKg0Tny/washing-1.jpg",
+        "name": "Washing Machines",
+        "description": "Bangladesh lergest WashingM supplier company",
+        "price": "1200",
+        "quantity": "18",
+        "supplier": "Osman Enterprise"
+    },
+    {
+        "id": "8",
+        "img": "https://i.ibb.co/xgYD5pw/air-cooler.jpg",
+        "name": "Air Cooler",
+        "description": "Bangladesh lergest air cooler supplier company",
+        "price": "1400",
+        "quantity": "8",
+        "supplier": "Jarkutay Enterprise"
+    },
+    {
+        "id": "9",
+        "img": "https://i.ibb.co/M2qFqZt/sphone.jpg",
+        "name": "Smartphone",
+        "description": "Bangladesh lergest smartphone supplier company",
+        "price": "1900",
+        "quantity": "9",
+        "supplier": "Saltuk Enterprise"
     }
 ]
