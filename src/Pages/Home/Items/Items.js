@@ -7,7 +7,7 @@ const Items = () => {
     useEffect(() => {
         fetch('data.json')
             .then(response => response.json())
-            .then(data => setItems(data))
+            .then(data => setItems(data.slice(0,6)))
     }, [])
     return (
         <div className="container">
