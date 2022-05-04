@@ -25,7 +25,7 @@ const ItemDetails = () => {
                         <p style={{ color: '#6C757D' }}>{item?.description}</p>
                         <h5 style={{ color: 'gold', fontWeight: 'bold' }}>Price: ${item?.price}</h5>
                     </Card.Text>
-                    <Button variant="light">Update</Button>
+                    <Button variant="light">Delivered</Button>
                 </Card.Body>
             </Card>
         </div>
