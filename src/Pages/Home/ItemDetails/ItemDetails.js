@@ -31,7 +31,7 @@ const ItemDetails = () => {
                 .then(response => response.json())
                 .then(data => {
                     console.log(data)
-                    alert("Quantity updated")
+                    toast("Quantity updated")
                     setReload(!reload)
                 })
         } else {
