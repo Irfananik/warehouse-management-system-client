@@ -22,7 +22,7 @@ const AddItem = () => {
 
     return (
         <div className="container">
-            <h2 className="my-5" style={{ color: 'white' }}>Mange Items</h2>
+            <h2 className="my-5" style={{ color: 'white' }}>Add Items</h2>
             <form className="d-flex flex-column w-75 mx-auto my-4" onSubmit={handleSubmit(onSubmit)}>
                 <input className="my-2" placeholder="Photo Url" type="text" {...register("img", { required: true})} />
                 <input className="my-2" placeholder="Name" type="text"  {...register("name", { required: true})} />

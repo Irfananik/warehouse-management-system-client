@@ -4,18 +4,33 @@ import { useNavigate } from 'react-router-dom';
 
 const ManageItem = () => {
     const [managItem, setManagItem] = useState([])
+    const [reload, setReload] = useState(false)
 
     useEffect(() => {
         fetch('http://localhost:5000/items')
             .then(response => response.json())
             .then(data => setManagItem(data))
-    }, [])
+    }, [reload])
 
     const navigate = useNavigate()
 
     const handleAddItem = () => {
         navigate('/additem')
     }
+
+    const handleDeleteItem = (id) => {
+        const proceed = window.confirm('Are you sure you want to delete!')
+        if(proceed) {
+            const url =`http://localhost:5000/items/${id}`
+            fetch(url, {
+                method: 'DELETE'
+            })
+            .then(response => response.json())
+            .then(data => console.log(data))
+            setReload(!reload)
+        }
+    }
+
     return (
         <div className="container">
             <h2 className="my-5" style={{ color: 'white' }}>Mange Items</h2>
@@ -40,7 +55,7 @@ const ManageItem = () => {
                                 </tr>
                             </tbody>
                             <div>
-                                <Button className="d-flex align-items-center justify-content-center" variant="danger">Delete</Button>
+                                <Button onClick={() => handleDeleteItem(i._id)} className="d-flex align-items-center justify-content-center" variant="danger">Delete</Button>
                             </div>
                         </table>
                     </div>)
