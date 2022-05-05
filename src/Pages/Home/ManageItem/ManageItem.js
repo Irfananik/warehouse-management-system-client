@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import { Button } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
 
 const ManageItem = () => {
     const [managItem, setManagItem] = useState([])
@@ -8,6 +10,12 @@ const ManageItem = () => {
             .then(response => response.json())
             .then(data => setManagItem(data))
     }, [])
+
+    const navigate = useNavigate()
+
+    const handleAddItem = () => {
+        navigate('/additem')
+    }
     return (
         <div className="container">
             <h2 className="my-5" style={{ color: 'white' }}>Mange Items</h2>
@@ -31,10 +39,14 @@ const ManageItem = () => {
                                     <td>{i.price}</td>
                                 </tr>
                             </tbody>
+                            <div>
+                                <Button className="d-flex align-items-center justify-content-center" variant="danger">Delete</Button>
+                            </div>
                         </table>
                     </div>)
                 }
             </div>
+            <Button onClick={handleAddItem} className="my-4" variant="light">Add Item</Button>
         </div>
     );
 };

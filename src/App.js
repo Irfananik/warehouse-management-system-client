@@ -2,6 +2,7 @@ import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import About from './Pages/About/About';
 import Blog from './Pages/Blog/Blog';
+import AddItem from './Pages/Home/AddItem/AddItem';
 import Home from './Pages/Home/Home';
 import ItemDetails from './Pages/Home/ItemDetails/ItemDetails';
 import ManageItem from './Pages/Home/ManageItem/ManageItem';
@@ -27,7 +28,12 @@ function App() {
         }></Route>
         <Route path='/manageitem' element={
           <RequireAuth>
-            <ManageItem/>
+            <ManageItem />
+          </RequireAuth>
+        }></Route>
+        <Route path='/additem' element={
+          <RequireAuth>
+            <AddItem />
           </RequireAuth>
         }></Route>
         <Route path='/blog' element={<Blog />}></Route>

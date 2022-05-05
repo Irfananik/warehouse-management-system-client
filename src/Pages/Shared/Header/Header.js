@@ -13,13 +13,23 @@ const Header = () => {
     }
     return (
         <>
-            <Navbar className="p-4" bg="dark" variant="dark">
+            <Navbar className="p-4 d-block" bg="dark" variant="dark">
                 <Container>
                     <Navbar.Brand as={Link} to='/'>eElectronics</Navbar.Brand>
-                    <Nav className="me-auto">
+                    <Nav className="">
                         <Nav.Link as={Link} to='/'>Home</Nav.Link>
                         <Nav.Link as={Link} to='/blog'>Blog</Nav.Link>
                         <Nav.Link as={Link} to='/about'>About</Nav.Link>
+                        {
+                            user ? <Nav.Link as={Link} to='/manageitem'>ManageItem</Nav.Link>
+                                :
+                                <Nav.Link as={Link} to='/login'></Nav.Link>
+                        }
+                        {
+                            user ? <Nav.Link as={Link} to='/additem'>AddItem</Nav.Link>
+                                :
+                                <Nav.Link as={Link} to='/login'></Nav.Link>
+                        }
                         {
                             user ? <button className="btn btn-link text-decoration-none text-primary" onClick={handleLogOut}>LogOut</button>
                                 :
