@@ -7,7 +7,6 @@ const ItemDetails = () => {
     const { itemId } = useParams()
     const [item, setItem] = useState({})
     const [reload, setReload] = useState(false)
-    console.log(item)
 
     useEffect(() => {
         const url = `http://localhost:5000/items/${itemId}`
@@ -35,12 +34,35 @@ const ItemDetails = () => {
                     alert("Quantity updated")
                     setReload(!reload)
                 })
-        }else{
+        } else {
             toast('Opss...! Stock is empty')
         }
     }
 
-    //
+    //Add item
+    const handleAddItem = (event) => {
+        event.preventDefault()
+        const inputQuantity = event.target.quantity.value
+        const newQuantity = parseInt(inputQuantity) + parseInt(item?.quantity)
+        const url = `http://localhost:5000/items/${itemId}`
+        if (parseInt(inputQuantity) > 0) {
+            fetch(url, {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ quantity: newQuantity })
+            })
+                .then(response => response.json())
+                .then(data => {
+                    toast("Quantity updated")
+                    setReload(!reload)
+                })
+        } else {
+            toast('Opss...! You can not input negative value')
+        }
+        event.target.reset()
+    }
 
     return (
         <div >
@@ -58,13 +80,13 @@ const ItemDetails = () => {
                         <Button onClick={handleDelivered} variant="light">Delivered</Button>
                     </Card.Body>
                 </Card>
-                <ToastContainer/>
+                <ToastContainer />
             </div>
-            <div className="my-4">
+            <form onSubmit={handleAddItem} className="my-4">
                 <h6 className="text-light">Add Quantity</h6>
-                <input type="number" required /> <br /> <br />
-                <Button variant="light">Add</Button>
-            </div>
+                <input type="number" name="quantity" required /> <br /> <br />
+                <Button variant="light" type="submit">Add</Button>
+            </form>
         </div>
     );
 };
