@@ -13,7 +13,7 @@ const ItemDetails = () => {
         fetch(url)
             .then(response => response.json())
             .then(data => setItem(data))
-    }, [reload])
+    }, [reload, itemId])
 
     //Delivered button.......................................................
     const handleDelivered = () => {
