@@ -1,9 +1,13 @@
 import React from 'react';
 import { useForm } from "react-hook-form";
 import { toast, ToastContainer } from 'react-toastify';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../../../firebase.init';
 
 
 const AddItem = () => {
+    const [user] = useAuthState(auth);
+    const email = user?.email
     const { register, handleSubmit } = useForm();
     const onSubmit = data => {
         console.log(data)
@@ -13,13 +17,14 @@ const AddItem = () => {
             headers: {
                 'content-type': 'application/json'
             },
-            body: JSON.stringify(data)
+            body: JSON.stringify({...data, email})
         })
         .then(response => response.json())
         .then(result => {
             console.log(result)
             toast("Item added successfully")
         })
+        console.log(data)
     };
 
     return (
