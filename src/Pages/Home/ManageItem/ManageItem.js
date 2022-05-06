@@ -8,7 +8,7 @@ const ManageItem = () => {
     const [reload, setReload] = useState(false)
 
     useEffect(() => {
-        fetch('http://localhost:5000/items')
+        fetch('https://still-badlands-58804.herokuapp.com/items')
             .then(response => response.json())
             .then(data => setManagItem(data))
     }, [reload])
@@ -22,14 +22,14 @@ const ManageItem = () => {
     const handleDeleteItem = (id) => {
         const proceed = window.confirm('Are you sure you want to delete!')
         if (proceed) {
-            const url = `http://localhost:5000/items/${id}`
+            const url = `https://still-badlands-58804.herokuapp.com/items/${id}`
             fetch(url, {
                 method: 'DELETE'
             })
                 .then(response => response.json())
                 .then(data => console.log(data))
-            setReload(!reload)
             toast("Item deleted successfully")
+            setReload(!reload)
         }
     }
 

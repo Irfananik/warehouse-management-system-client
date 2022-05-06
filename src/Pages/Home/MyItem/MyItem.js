@@ -6,7 +6,7 @@ const MyItem = () => {
     const [myItem, setMyItem] = useState([])
 
     useEffect(() => {
-        const url = `http://localhost:5000/myitem?email=${email}`
+        const url = `https://still-badlands-58804.herokuapp.com/myitem?email=${email}`
         fetch(url)
             .then(response => response.json())
             .then(data => setMyItem(data))

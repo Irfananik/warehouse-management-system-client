@@ -4,7 +4,7 @@ const DiscountItem = () => {
     const [discount, setDiscount] = useState([])
 
     useEffect(() => {
-        fetch('http://localhost:5000/items')
+        fetch('https://still-badlands-58804.herokuapp.com/items')
             .then(response => response.json())
             .then(data => setDiscount(data.slice(0,3)))
     }, [])

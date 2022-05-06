@@ -9,7 +9,7 @@ const ItemDetails = () => {
     const [reload, setReload] = useState(false)
 
     useEffect(() => {
-        const url = `http://localhost:5000/items/${itemId}`
+        const url = `https://still-badlands-58804.herokuapp.com/items/${itemId}`
         fetch(url)
             .then(response => response.json())
             .then(data => setItem(data))
@@ -19,7 +19,7 @@ const ItemDetails = () => {
     const handleDelivered = () => {
         const newQuantity = parseInt(item?.quantity) - 1
         console.log(newQuantity)
-        const url = `http://localhost:5000/items/${itemId}`
+        const url = `https://still-badlands-58804.herokuapp.com/items/${itemId}`
         if (item?.quantity > 0) {
             fetch(url, {
                 method: 'PUT',
@@ -44,7 +44,7 @@ const ItemDetails = () => {
         event.preventDefault()
         const inputQuantity = event.target.quantity.value
         const newQuantity = parseInt(inputQuantity) + parseInt(item?.quantity)
-        const url = `http://localhost:5000/items/${itemId}`
+        const url = `https://still-badlands-58804.herokuapp.com/items/${itemId}`
         if (parseInt(inputQuantity) > 0) {
             fetch(url, {
                 method: 'PUT',
