@@ -6,6 +6,7 @@ import AddItem from './Pages/Home/AddItem/AddItem';
 import Home from './Pages/Home/Home';
 import ItemDetails from './Pages/Home/ItemDetails/ItemDetails';
 import ManageItem from './Pages/Home/ManageItem/ManageItem';
+import MyItem from './Pages/Home/MyItem/MyItem';
 import Login from './Pages/Register/Login';
 import RequireAuth from './Pages/Register/RequireAuth';
 import SignUp from './Pages/Register/SignUp';
@@ -34,6 +35,11 @@ function App() {
         <Route path='/additem' element={
           <RequireAuth>
             <AddItem />
+          </RequireAuth>
+        }></Route>
+        <Route path='/myitem' element={
+          <RequireAuth>
+            <MyItem />
           </RequireAuth>
         }></Route>
         <Route path='/blog' element={<Blog />}></Route>

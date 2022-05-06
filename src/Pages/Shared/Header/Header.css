@@ -1,0 +1,9 @@
+@media (max-width: 576px) {
+    .nav-namu{
+        display: none;
+    }
+
+    .manu-size{
+        font-size:10px;
+    }
+}

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Button } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
+import { toast, ToastContainer } from 'react-toastify';
 
 const ManageItem = () => {
     const [managItem, setManagItem] = useState([])
@@ -20,14 +21,15 @@ const ManageItem = () => {
 
     const handleDeleteItem = (id) => {
         const proceed = window.confirm('Are you sure you want to delete!')
-        if(proceed) {
-            const url =`http://localhost:5000/items/${id}`
+        if (proceed) {
+            const url = `http://localhost:5000/items/${id}`
             fetch(url, {
                 method: 'DELETE'
             })
-            .then(response => response.json())
-            .then(data => console.log(data))
+                .then(response => response.json())
+                .then(data => console.log(data))
             setReload(!reload)
+            toast("Item deleted successfully")
         }
     }
 
@@ -62,6 +64,7 @@ const ManageItem = () => {
                 }
             </div>
             <Button onClick={handleAddItem} className="my-4" variant="light">Add Item</Button>
+            <ToastContainer />
         </div>
     );
 };

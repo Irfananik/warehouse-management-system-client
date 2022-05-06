@@ -1,5 +1,6 @@
 import React from 'react';
 import { useForm } from "react-hook-form";
+import { toast, ToastContainer } from 'react-toastify';
 
 
 const AddItem = () => {
@@ -17,6 +18,7 @@ const AddItem = () => {
         .then(response => response.json())
         .then(result => {
             console.log(result)
+            toast("Item added successfully")
         })
     };
 
@@ -32,6 +34,7 @@ const AddItem = () => {
                 <input className="my-2" placeholder="Price"  type="number" {...register("price", { required: true})} />
                 <input className="my-2"  type="submit" value="Add Item"/>
             </form>
+            <ToastContainer/>
         </div>
     );
 };
