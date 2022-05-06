@@ -34,4 +34,4 @@ This website create based on  multiple items warehouse management system which n
 
 9. Mongodb [</ Documentation>](https://www.mongodb.com/docs/atlas/)
 
-10. Stackoverflow Link [</ Documentation>](https://stackoverflow.com/questions/72133000/how-can-i-fixed-this-issue)
+10. Stackoverflow Link [</ Question>](https://stackoverflow.com/questions/72133000/how-can-i-fixed-this-issue)
