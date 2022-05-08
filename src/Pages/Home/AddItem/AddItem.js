@@ -9,7 +9,7 @@ const AddItem = () => {
     const [user] = useAuthState(auth);
     const email = user?.email
     const { register, handleSubmit } = useForm();
-    const onSubmit = data => {
+    const onSubmit = (data, event) => {
         console.log(data)
         const url = `https://still-badlands-58804.herokuapp.com/items`
         fetch(url, {
@@ -23,6 +23,7 @@ const AddItem = () => {
         .then(result => {
             console.log(result)
             toast("Item added successfully")
+            event.target.reset()
         })
         console.log(data)
     };

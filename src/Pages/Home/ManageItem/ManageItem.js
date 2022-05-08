@@ -5,13 +5,12 @@ import { toast, ToastContainer } from 'react-toastify';
 
 const ManageItem = () => {
     const [managItem, setManagItem] = useState([])
-    const [reload, setReload] = useState(false)
 
     useEffect(() => {
         fetch('https://still-badlands-58804.herokuapp.com/items')
             .then(response => response.json())
             .then(data => setManagItem(data))
-    }, [reload])
+    }, [])
 
     const navigate = useNavigate()
 
@@ -27,9 +26,11 @@ const ManageItem = () => {
                 method: 'DELETE'
             })
                 .then(response => response.json())
-                .then(data => console.log(data))
+                .then(data => {
+                    const remaining = managItem.filter(item => item._id !== id)
+                    setManagItem(remaining)
+                })
             toast("Item deleted successfully")
-            setReload(!reload)
         }
     }
 
